@@ -86,11 +86,56 @@ section {
 .heading span {
   color: rgb(115, 3, 167);
 }
+
+/* Skills section styles */
+.tech-stack-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    padding: 2rem;
+}
+
+.tech-stack-box {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+}
+
+.tech-stack-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-color: rgb(115, 3, 167);
+}
+
+.tech-stack-box img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.tech-stack-box span {
+    display: block;
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.needtobeinvert {
+    filter: brightness(0.1);
+}
+
 header .logo {
-  font-size: 1.9rem;
-  font-weight: 800;
-  text-decoration: none;
-  color: #0e2431;
+    font-size: 1.9rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: #0e2431;
 }
 header .logo i {
   font-size: 2.2rem;
@@ -651,19 +696,176 @@ header .navbar ul li a:hover {
 .work .heading span {
   color: rgb(255, 230, 0);
 }
-.work .box-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin: 2rem;
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.work .box-container .box {
-  flex: 1 1 30rem;
+
+.project-card {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.project-description {
+    font-size: 1.4rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.video-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    color: rgb(115, 3, 167);
+    font-size: 1.6rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.video-link:hover {
+    color: #420177;
+    transform: translateX(5px);
+}
+
+.video-link i {
+    font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-card {
+        min-height: 200px;
+    }
+}
+
+.work .project-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.work .project-box .info-wrapper {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.work .project-box .tech-icons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.work .project-box .tech-icons .tech-icon {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+}
+
+.work .project-box .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.work .project-box .tag h3 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.work .project-box .desc {
+  flex: 1;
+}
+
+.work .project-box .desc p {
+  font-size: 1.4rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.work .project-box .btns {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.work .project-box .btn {
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background: rgb(115, 3, 167);
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.work .project-box .btn:hover {
+  background: #420177;
+}
+
+.work .project-box .image-wrapper {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.work .project-box .image-wrapper img {
+  max-width: 100%;
+  height: auto;
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  position: relative;
-  overflow: hidden;
-  height: 30rem;
+}
+
+@media (max-width: 768px) {
+  .work .project-box {
+    flex-direction: column;
+  }
+  
+  .work .project-box .image-wrapper {
+    order: -1;
+  }
 }
 .work .box-container .box img {
   height: 100%;
