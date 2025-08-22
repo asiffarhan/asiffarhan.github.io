@@ -91,20 +91,25 @@ section {
 .tech-stack-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-    padding: 2rem;
+    gap: 1.5rem;
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 1200px;
 }
 
 .tech-stack-box {
     background: #fff;
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 1.5rem;
     text-align: center;
     transition: all 0.3s ease;
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .tech-stack-box:hover {
@@ -114,17 +119,40 @@ section {
 }
 
 .tech-stack-box img {
-    width: 48px;
-    height: 48px;
+    width: clamp(32px, 5vw, 48px);
+    height: clamp(32px, 5vw, 48px);
     object-fit: contain;
     margin-bottom: 1rem;
 }
 
 .tech-stack-box span {
     display: block;
-    font-size: 1.4rem;
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
     color: #333;
     font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+    .tech-stack-wrapper {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .tech-stack-box {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .tech-stack-wrapper {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 0.8rem;
+    }
+
+    .tech-stack-box {
+        padding: 0.8rem;
+    }
 }
 
 .needtobeinvert {
