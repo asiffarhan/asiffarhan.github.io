@@ -132,6 +132,54 @@ section {
     font-weight: 600;
 }
 
+.design-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.design-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.design-item {
+    background: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+    padding: 1.5rem;
+}
+
+.design-item span {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+}
+
+.design-note {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #555;
+    font-size: 1.2rem;
+}
+
+.design-note code {
+    background: #f2f2f2;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.4rem;
+    font-size: 1.1rem;
+}
+
 @media screen and (max-width: 768px) {
     .tech-stack-wrapper {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
