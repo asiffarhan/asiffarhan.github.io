@@ -452,8 +452,9 @@ header .navbar ul li a:hover {
   flex: 1 1 35rem;
 }
 .about .row .image img {
-  margin: 4rem;
+  margin: 4rem auto;
   width: 30rem;
+  max-width: 100%;
   height: auto;
   border-radius: 5%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
