@@ -1,591 +1,707 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="jigar sable, portfolio, jigar, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
-    <meta name="description" content="Welcome to Jigar's Portfolio. Full-Stack Web Developer and Android App Developer" />
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Favicon -->
-    <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.jpeg" type="image/x-png">
-    <title>Portfolio | Asif Farhan</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Asif Farhan, CFD Simulation Engineer at MACPROTEC Engineering. Explore his research, education, training, and engineering projects.">
+  <meta name="theme-color" content="#f6f4ed">
+  <meta name="robots" content="noindex">
+  <title>Asif Farhan · Mechanical Engineering & CFD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./site.js" defer></script>
 </head>
-<body oncontextmenu="return false">
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="masthead">
+    <div class="frame header-inner">
+      <a class="wordmark" href="#home" aria-label="Asif Farhan, home"><span class="monogram" aria-hidden="true">AF</span><span>Asif Farhan</span></a>
+      <nav class="section-nav" aria-label="Quick links to sections">
+        <a href="#research">Research</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#work">Training &amp; Projects</a>
+        <a href="#skills">Skills &amp; Certs</a>
+        <a href="#cv">CV &amp; Contact</a>
+      </nav>
+      <a id="menu-trigger" class="menu-button" href="#page-links">Menu <span class="menu-icon" aria-hidden="true"></span></a>
+    </div>
+  </header>
 
-<!-- pre loader -->
-<!-- <div class="loader-container">
-  <img draggable="false" src="./assets/images/preloader.gif" alt="">
-</div> -->
+  <dialog id="site-menu" aria-labelledby="menu-title">
+    <div class="drawer">
+      <div class="drawer-top">
+        <h2 id="menu-title">Menu</h2>
+        <form method="dialog"><button class="close-button" aria-label="Close menu" autofocus>×</button></form>
+      </div>
+      <nav class="drawer-links" aria-label="Site sections">
+        <a href="#home">Home <span aria-hidden="true">↗</span></a>
+        <a href="#research">Research <span aria-hidden="true">↗</span></a>
+        <a href="#education">Education <span aria-hidden="true">↗</span></a>
+        <a href="#experience">Work Experience <span aria-hidden="true">↗</span></a>
+        <a href="#work">Training &amp; Projects <span aria-hidden="true">↗</span></a>
+        <a href="#skills">Skills &amp; Certifications <span aria-hidden="true">↗</span></a>
+        <a href="#cv">CV &amp; Contact <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </dialog>
 
+  <main id="main">
+    <section class="frame hero" id="home" aria-labelledby="intro-title">
+      <div class="hero-copy" id="about">
+        <h1 id="intro-title">Asif <em>Farhan</em></h1>
+        <p class="current-role">CFD Simulation Engineer at <a href="#experience">MACPROTEC Engineering</a></p>
+        <p class="intro">I’m a mechanical engineer from Dhaka, Bangladesh, interested in multiphase flow, heat transfer, and fluid–structure interaction through both computational and experimental work. I currently work with MACPROTEC Engineering, a Houston-based engineering and consulting firm.</p>
+        <div class="hero-actions">
+          <a class="primary-button" href="#research">Explore <span aria-hidden="true">↓</span></a>
+          <a class="primary-button" href="./assets/asif-farhan-cv.pdf" target="_blank" rel="noopener" aria-label="My CV (PDF, opens in a new tab)">My CV <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <figure class="portrait">
+        <img src="./assets/portrait.jpg" alt="Portrait of Asif Farhan" width="1055" height="1491" fetchpriority="high">
+      </figure>
+    </section>
 
+    <section class="research band" id="research" aria-labelledby="research-title">
+      <div class="frame section-interior">
+        <div class="section-heading">
+          <h2 id="research-title">Research</h2>
+          <a class="submissions-link" href="#research-submissions">View submissions <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="topic-switcher" aria-label="Research topics" role="group" hidden>
+          <button type="button" aria-controls="multiphase" aria-pressed="true">Multiphase Flow</button>
+          <button type="button" aria-controls="heat-transfer" aria-pressed="false">Heat Transfer</button>
+          <button type="button" aria-controls="fsi" aria-pressed="false">Fluid–Structure Interaction</button>
+          <button type="button" aria-controls="experiments" aria-pressed="false">Experimental Work</button>
+        </div>
+        <div class="topic-panel" id="multiphase">
+          <h3 class="topic-heading">Multiphase Flow</h3>
+          <details class="study" id="droplet-freezing" open>
+            <summary>
+              <span>
+                <span class="study-meta">Impact and freezing · Benchmark validation</span>
+                <span class="study-title" role="heading" aria-level="4">Freezing of a Supercooled Droplet <span class="study-reference">(Zhang et al. benchmark)</span></span>
+              </span>
+              <span class="expand" aria-hidden="true"></span>
+            </summary>
+            <div class="study-content">
+              <div class="study-media validation-media freezing-media">
+                <figure>
+                  <h5>Freezing animation</h5>
+                  <video controls preload="none" playsinline poster="./assets/droplet-freezing/freezing.jpg" aria-label="Supercooled droplet impact and freezing animation">
+                    <source src="./assets/droplet-freezing/freezing.mp4" type="video/mp4">
+                  </video>
+                  <figcaption>Ice volume fraction during impact and freezing.</figcaption>
+                </figure>
+                <figure>
+                  <h5>Spreading-factor validation</h5>
+                  <a class="contour-link" href="./assets/droplet-freezing/spreading-factor.png" target="_blank" rel="noopener" aria-label="Open the full-size spreading-factor plot in a new tab">
+                    <img src="./assets/droplet-freezing/spreading-factor.png" alt="Spreading factor beta against time since impact in milliseconds, comparing the present simulation with Zhang et al.’s simulation and experimental data" width="1020" height="750" loading="lazy" decoding="async">
+                  </a>
+                  <figcaption>Spreading factor (<i>β</i>) versus time after impact, compared with Zhang et al.’s simulation and experiment. Select the plot to open it at full size.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </details>
+          <details class="study" id="droplet-flat">
+            <summary><span><span class="study-meta">OpenFOAM · CFD project</span><span class="study-title" role="heading" aria-level="4">Free-falling droplet impact on a flat surface</span></span><span class="expand" aria-hidden="true"></span></summary>
+            <div class="study-content">
+              <p>Simulates the impact of a falling liquid droplet on a flat surface to study deformation, spreading, and rebound.</p>
+              <div class="study-media validation-media">
+                <figure>
+                  <h5>Impact animation</h5>
+                  <video controls preload="none" playsinline poster="./assets/multiphase/flat-impact.jpg" aria-label="Free-falling droplet impact on a flat surface animation">
+                    <source src="./assets/multiphase/flat-impact.mp4" type="video/mp4">
+                  </video>
+                </figure>
+                <figure>
+                  <h5>Spreading validation</h5>
+                  <a class="contour-link" href="./assets/multiphase/flat-impact-plot.png" target="_blank" rel="noopener" aria-label="Open the full-size flat-surface validation plot in a new tab">
+                    <img src="./assets/multiphase/flat-impact-plot-preview.png" alt="Droplet spreading plot with the present OpenFOAM study in orange and the A. Goswami and Y. Hardalupas reference curve in blue" width="1800" height="1171" loading="lazy" decoding="async">
+                  </a>
+                  <figcaption>Droplet spreading in the present OpenFOAM study compared with the reference curve from A. Goswami and Y. Hardalupas. Select the plot to open it at full size.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </details>
+          <details class="study" id="droplet-curved">
+            <summary><span><span class="study-meta">OpenFOAM · CFD project</span><span class="study-title" role="heading" aria-level="4">Free-falling droplet impact on a hemispherical surface</span></span><span class="expand" aria-hidden="true"></span></summary>
+            <div class="study-content">
+              <p>Investigates droplet deformation and spreading on a curved surface using OpenFOAM.</p>
+              <div class="study-media">
+                <figure>
+                  <video controls preload="none" playsinline poster="./assets/multiphase/hemispherical-impact.jpg" aria-label="Free-falling droplet impact on a hemispherical surface animation">
+                    <source src="./assets/multiphase/hemispherical-impact.mp4" type="video/mp4">
+                  </video>
+                </figure>
+              </div>
+            </div>
+          </details>
+          <details class="study" id="container-fill">
+            <summary><span><span class="study-meta">CFD project</span><span class="study-title" role="heading" aria-level="4">Multiphase flow during container filling</span></span><span class="expand" aria-hidden="true"></span></summary>
+            <div class="study-content">
+              <p>Examines air–water interaction and free-surface evolution during filling, including changes in velocity and pressure.</p>
+              <div class="study-media">
+                <figure>
+                  <video controls preload="none" playsinline poster="./assets/multiphase/container-filling.jpg" aria-label="Multiphase flow during container filling animation">
+                    <source src="./assets/multiphase/container-filling.mp4" type="video/mp4">
+                  </video>
+                </figure>
+              </div>
+            </div>
+          </details>
+          <details class="study" id="rafi-ahmed-droplet">
+            <summary>
+              <span>
+                <span class="study-meta">ANSYS Fluent · Analytical comparison</span>
+                <span class="study-title" role="heading" aria-level="4">Free-falling droplet deformation <span class="study-reference">(Rafi &amp; Ahmed, 2022)</span></span>
+              </span>
+              <span class="expand" aria-hidden="true"></span>
+            </summary>
+            <div class="study-content">
+              <p>This ANSYS Fluent study reproduced the falling-droplet deformation cases of Rafi &amp; Ahmed (<cite>Arch. Mech. Eng.</cite>, 2022).</p>
+              <div class="study-media validation-media">
+                <figure>
+                  <a class="contour-link" href="./assets/heat-transfer/droplet-free-fall-velocity.png" target="_blank" rel="noopener" aria-label="Open the full-size droplet velocity plot in a new tab">
+                    <img src="./assets/heat-transfer/droplet-free-fall-velocity-preview.png" alt="Droplet velocity versus time for cases labeled 8, 10, 15, 20, and 25 millimeters, with analytical reference points" width="1800" height="1286" loading="lazy" decoding="async">
+                  </a>
+                  <figcaption>Velocity over time for the five simulated cases compared with analytical values. Select the plot to open it at full size.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </details>
+        </div>
 
-<!-- navbar starts -->
-<header>
-        <a href="/" class="logo"><span class="logo-initials">AF</span> Asif Farhan</a>
+        <div class="topic-panel" id="heat-transfer">
+          <h3 class="topic-heading">Heat Transfer</h3>
+          <details class="study" id="pcm-melting" open>
+            <summary>
+              <span>
+                <span class="study-meta">OpenFOAM · Benchmark validation</span>
+                <span class="study-title" role="heading" aria-level="4">Melting of a Phase-Change Material <span class="study-reference">(Alnakeeb et al. benchmark)</span></span>
+              </span>
+              <span class="expand" aria-hidden="true"></span>
+            </summary>
+            <div class="study-content">
+              <p>This OpenFOAM case tracks phase-change material (PCM) melting in an annular geometry.</p>
+              <div class="study-media validation-media">
+                <figure>
+                  <h5>Melting animation</h5>
+                  <video controls preload="none" playsinline poster="./assets/heat-transfer/pcm-melting.jpg" aria-label="OpenFOAM PCM melting temperature animation">
+                    <source src="./assets/heat-transfer/pcm-melting.mp4" type="video/mp4">
+                  </video>
+                  <figcaption>Temperature contours during melting.</figcaption>
+                </figure>
+                <figure>
+                  <h5>Liquid-fraction validation</h5>
+                  <a class="contour-link" href="./assets/heat-transfer/liquid-fraction.png" target="_blank" rel="noopener" aria-label="Open the full-size liquid-fraction plot in a new tab">
+                    <img src="./assets/heat-transfer/liquid-fraction-preview.png" alt="Liquid fraction over time, comparing the present OpenFOAM case in blue with the Alnakeeb et al. reference in orange" width="1800" height="1154" loading="lazy" decoding="async">
+                  </a>
+                  <figcaption>Liquid fraction over time for the OpenFOAM case and the Alnakeeb et al. reference. Select the plot to open it at full size.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </details>
+          <details class="study" id="ansys-alnakeeb">
+            <summary>
+              <span>
+                <span class="study-meta">ANSYS Fluent · Benchmark validation</span>
+                <span class="study-title" role="heading" aria-level="4">Solid–liquid PCM melting <span class="study-reference">(Alnakeeb et al. benchmark)</span></span>
+              </span>
+              <span class="expand" aria-hidden="true"></span>
+            </summary>
+            <div class="study-content">
+              <div class="study-media validation-media">
+                <figure>
+                  <a class="contour-link" href="./assets/heat-transfer/ansys-alnakeeb-liquid-fraction.png" target="_blank" rel="noopener" aria-label="Open the full-size Alnakeeb liquid-fraction plot in a new tab">
+                    <img src="./assets/heat-transfer/ansys-alnakeeb-liquid-fraction-preview.png" alt="Liquid fraction rises toward one over time for both the ANSYS Fluent case and the Alnakeeb et al. reference" width="1800" height="872" loading="lazy" decoding="async">
+                  </a>
+                  <figcaption>Liquid fraction over time for the ANSYS Fluent case and the Alnakeeb et al. reference. Select the plot to open it at full size.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </details>
+          <details class="study" id="ansys-farulla">
+            <summary>
+              <span>
+                <span class="study-meta">ANSYS Fluent · Benchmark validation</span>
+                <span class="study-title" role="heading" aria-level="4">Solid–fluid PCM heat transfer <span class="study-reference">(Farulla et al. benchmark)</span></span>
+              </span>
+              <span class="expand" aria-hidden="true"></span>
+            </summary>
+            <div class="study-content">
+              <div class="study-media validation-media">
+                <figure>
+                  <a class="contour-link" href="./assets/heat-transfer/ansys-farulla-temperature.png" target="_blank" rel="noopener" aria-label="Open the full-size Farulla temperature plot in a new tab">
+                    <img src="./assets/heat-transfer/ansys-farulla-temperature-preview.png" alt="Temperature over time for the ANSYS Fluent case and Farulla et al. numerical and experimental reference data" width="1800" height="872" loading="lazy" decoding="async">
+                  </a>
+                  <figcaption>Temperature over time compared with the numerical and experimental results from Farulla et al. Select the plot to open it at full size.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </details>
+          <details class="study" id="liu-bubble-validation">
+            <summary>
+              <span>
+                <span class="study-meta">OpenFOAM v14 · Volume-of-fluid validation</span>
+                <span class="study-title" role="heading" aria-level="4">Rising-bubble dynamics <span class="study-reference">(Liu et al., 2024)</span></span>
+              </span>
+              <span class="expand" aria-hidden="true"></span>
+            </summary>
+            <div class="study-content">
+              <p>Contour and animation material associated with “Inconsistencies in Unstructured Geometric Volume-of-Fluid Methods for Two-Phase Flows with High Density Ratios” by Liu, Tolle, Zuzio, Estivalèzes, Marquez Damian, and Marić (2024).</p>
+              <div class="study-media validation-media">
+                <figure>
+                  <h5>Rising-bubble contours</h5>
+                  <img src="./assets/heat-transfer/rising-bubble-contour.png" alt="Velocity magnitude and dynamic-pressure contours around a rising bubble at 0.40 seconds" width="1210" height="713" loading="lazy" decoding="async">
+                  <figcaption>Velocity magnitude and dynamic pressure for a rising bubble (Mo = 41.1), at 0.40 s.</figcaption>
+                </figure>
+                <figure>
+                  <h5>Rising-bubble animation</h5>
+                  <img src="./assets/heat-transfer/rising-bubble-animation.gif" alt="OpenFOAM v14 axisymmetric animation of a rising bubble with velocity and dynamic-pressure contours" width="900" height="520" loading="lazy" decoding="async">
+                  <figcaption>Bubble evolution for Mo = 848, with velocity and dynamic-pressure fields.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </details>
+          <details class="study" id="yahyaee-film-boiling">
+            <summary>
+              <span>
+                <span class="study-meta">OpenFOAM v14 · Film-boiling study</span>
+                <span class="study-title" role="heading" aria-level="4">Nanofluid film boiling on vertical cylinders <span class="study-reference">(Yahyaee, 2024)</span></span>
+              </span>
+              <span class="expand" aria-hidden="true"></span>
+            </summary>
+            <div class="study-content">
+              <p>“Influence of nanoparticle shapes in nanofluid film boiling on vertical cylinders: A numerical study,” published in the <cite>International Journal of Thermofluids</cite>, volume 22 (2024). The supplied visuals show phase distribution and temperature fields during 2-D film boiling.</p>
+              <div class="study-media validation-media">
+                <figure>
+                  <h5>Film-boiling contours</h5>
+                  <img src="./assets/heat-transfer/film-boiling-contours.png" alt="Phase distribution and temperature contours for two-dimensional film boiling in near-critical water at 2.000 seconds" width="1210" height="713" loading="lazy" decoding="async">
+                  <figcaption>Liquid/vapour phase distribution and temperature at 2.000 s.</figcaption>
+                </figure>
+                <figure>
+                  <h5>Film-boiling animation</h5>
+                  <img src="./assets/heat-transfer/film-boiling-animation.gif" alt="Animation of phase distribution and temperature in two-dimensional film boiling" width="900" height="520" loading="lazy" decoding="async">
+                  <figcaption>Evolution of the phase field and temperature during 2-D film boiling.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </details>
+        </div>
+        <div class="topic-panel" id="fsi">
+          <h3 class="topic-heading">Fluid–Structure Interaction</h3>
+          <details class="study biolocomotion" id="biolocomotion">
+            <summary>
+              <span>
+                <span class="study-meta">OpenFOAM (ESI) · Current research</span>
+                <span class="study-title" role="heading" aria-level="4">Biolocomotion</span>
+                <span class="bio-open-label">View contours and animations</span>
+              </span>
+              <span class="expand" aria-hidden="true"></span>
+            </summary>
+            <div class="study-content">
+              <section class="bio-group" aria-labelledby="biolocomotion-3d">
+                <h5 id="biolocomotion-3d">3D simulations</h5>
+                <div class="bio-case">
+                  <h6>Benchmark validation</h6>
+                  <p>The carangiform swimming case at <i>Re</i> = 300 and <i>St</i> = 1.1 uses the benchmark by <a href="https://pubmed.ncbi.nlm.nih.gov/18456881/" target="_blank" rel="noopener">Borazjani and Sotiropoulos (2008)</a>.</p>
+                  <div class="bio-field">
+                    <p class="bio-field-label">Velocity magnitude</p>
+                    <div class="study-media">
+                      <figure>
+                        <a class="contour-link" href="./assets/biolocomotion/validation-velocity.png" target="_blank" rel="noopener" aria-label="Open full-size velocity magnitude contour in a new tab">
+                          <img src="./assets/biolocomotion/validation-velocity.png" alt="Three-dimensional fish wake colored by velocity magnitude, with a color scale at right" width="3840" height="2160" loading="lazy" decoding="async">
+                        </a>
+                        <figcaption>Contour snapshot · select the image for full size</figcaption>
+                      </figure>
+                      <figure>
+                        <video controls preload="none" playsinline poster="./assets/biolocomotion/validation-velocity.jpg" aria-label="3D benchmark velocity magnitude animation">
+                          <source src="./assets/biolocomotion/validation-velocity.mp4" type="video/mp4">
+                        </video>
+                        <figcaption>Velocity magnitude animation</figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="bio-field">
+                    <p class="bio-field-label">Q-criterion</p>
+                    <div class="study-media">
+                      <figure>
+                        <a class="contour-link" href="./assets/biolocomotion/validation-q.png" target="_blank" rel="noopener" aria-label="Open full-size Q-criterion figure in a new tab">
+                          <img src="./assets/biolocomotion/validation-q.png" alt="Red Q-criterion isosurfaces around the fish and in its wake, with a color scale at right" width="3840" height="2160" loading="lazy" decoding="async">
+                        </a>
+                        <figcaption>Isosurface snapshot · select the image for full size</figcaption>
+                      </figure>
+                      <figure>
+                        <video controls preload="none" playsinline poster="./assets/biolocomotion/validation-q.jpg" aria-label="3D benchmark Q-criterion animation">
+                          <source src="./assets/biolocomotion/validation-q.mp4" type="video/mp4">
+                        </video>
+                        <figcaption>Q-criterion animation</figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
 
-        <div id="menu" class="fas fa-bars"></div>
-        <nav class="navbar">
-            <ul>
-            <li><a class="active" href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#work">Projects</a></li>
-            <li><a href="#design">Design (CAD)</a></li>
-            <li><a href="#certifications">Certifications</a></li>
+                <div class="bio-case">
+                  <h6>Additional fish-surface views</h6>
+                  <div class="study-media">
+                    <figure>
+                      <video controls preload="none" playsinline poster="./assets/biolocomotion/surface-velocity.jpg" aria-label="Velocity magnitude on the fish surface animation">
+                        <source src="./assets/biolocomotion/surface-velocity.mp4" type="video/mp4">
+                      </video>
+                      <figcaption>Velocity magnitude on the fish surface</figcaption>
+                    </figure>
+                    <figure>
+                      <video controls preload="none" playsinline poster="./assets/biolocomotion/surface-pressure.jpg" aria-label="Pressure on the fish surface animation">
+                        <source src="./assets/biolocomotion/surface-pressure.mp4" type="video/mp4">
+                      </video>
+                      <figcaption>Pressure on the fish surface</figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </section>
+
+              <section class="bio-group" aria-labelledby="biolocomotion-2d">
+                <h5 id="biolocomotion-2d">2D simulations</h5>
+                <div class="bio-case">
+                  <p>These clips show the flow fields from separate 2D swimming work.</p>
+                  <div class="study-media">
+                    <figure>
+                      <video controls preload="none" playsinline poster="./assets/biolocomotion/2d-velocity.jpg" aria-label="2D swimming velocity magnitude animation">
+                        <source src="./assets/biolocomotion/2d-velocity.mp4" type="video/mp4">
+                      </video>
+                      <figcaption>Velocity magnitude around the moving body and its wake</figcaption>
+                    </figure>
+                    <figure>
+                      <video controls preload="none" playsinline poster="./assets/biolocomotion/2d-turbulence.jpg" aria-label="2D swimming turbulent kinetic energy animation">
+                        <source src="./assets/biolocomotion/2d-turbulence.mp4" type="video/mp4">
+                      </video>
+                      <figcaption>Turbulent kinetic energy (<i>k</i>) in the wake</figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </details>
+        </div>
+        <div class="topic-panel" id="experiments">
+          <h3 class="topic-heading">Experimental Work</h3>
+          <details class="study" id="fiber-composite-experiment">
+            <summary>
+              <span>
+                <span class="study-meta">Materials fabrication · Experimental study</span>
+                <span class="study-title" role="heading" aria-level="4"><i>Nymphaea rubra</i> Peduncle Fiber <span class="study-reference">(experimental composite study)</span></span>
+                <span class="bio-open-label">View fabrication and testing images</span>
+              </span>
+              <span class="expand" aria-hidden="true"></span>
+            </summary>
+            <div class="study-content">
+              <p>This fully experimental study, “<i>Nymphaea rubra</i> Peduncle Fiber: Effect of Water Retting and Alkali Treatment on Single-Fiber Tensile Strength and Properties of Its Unidirectional Epoxy Laminates,” used manually collected plant fibers to fabricate a new epoxy composite and evaluate it through tensile testing.</p>
+              <div class="study-media experimental-media">
+                <figure><img src="./assets/experimental-fiber/collected-fibers.png" alt="Manually collected Nymphaea rubra fibers before composite fabrication" loading="lazy" decoding="async"><figcaption>Collected plant fibers</figcaption></figure>
+                <figure><img src="./assets/experimental-fiber/single-fiber-tensile-test.png" alt="A fiber specimen mounted between tensile-test grips" loading="lazy" decoding="async"><figcaption>Single-fiber tensile-test setup</figcaption></figure>
+                <figure><img src="./assets/experimental-fiber/fiber-microscope-measurement.png" alt="Microscopic view with measurements of a plant fiber" loading="lazy" decoding="async"><figcaption>Microscopic fiber measurements</figcaption></figure>
+                <figure><img src="./assets/experimental-fiber/composite-mold.png" alt="Mold used to fabricate a composite laminate" loading="lazy" decoding="async"><figcaption>Composite fabrication mold</figcaption></figure>
+                <figure><img src="./assets/experimental-fiber/fiber-composite-laminate.png" alt="Fabricated fiber-reinforced epoxy composite laminate" loading="lazy" decoding="async"><figcaption>Fabricated composite laminate</figcaption></figure>
+                <figure><img src="./assets/experimental-fiber/tensile-specimen.png" alt="Prepared dog-bone tensile-test specimen" loading="lazy" decoding="async"><figcaption>Prepared tensile specimen</figcaption></figure>
+                <figure><img src="./assets/experimental-fiber/tensile-specimens.png" alt="A set of prepared tensile-test specimens" loading="lazy" decoding="async"><figcaption>Prepared test specimens</figcaption></figure>
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <section class="submissions" id="research-submissions" aria-labelledby="submissions-title">
+          <h3 class="subsection-title" id="submissions-title">Research Submissions</h3>
+          <div class="submission-group">
+            <h4>Journal Manuscripts</h4>
+            <ul class="submission-list">
+              <li>
+                <div>
+                  <h5><em>Nymphaea rubra</em> Peduncle Fiber: Effect of Water Retting and Alkali Treatment on Single-Fiber Tensile Strength and Properties of Its Unidirectional Epoxy Laminates</h5>
+                  <p class="submission-venue">Fibers &amp; Polymers</p>
+                </div>
+                <p class="submission-status">Submitted · decision pending</p>
+              </li>
+              <li>
+                <div>
+                  <h5>Numerical Investigation of Thermal Energy Storage in Solid-Solid Phase Change Materials with New Fin Architecture for Shell-and-Tube Heat Exchanger</h5>
+                  <p class="submission-venue">Journal of Energy Storage</p>
+                </div>
+                <p class="submission-status">Submitted · decision pending</p>
+              </li>
             </ul>
-        </nav>
-</header>
-<!-- navbar ends -->
-
-
-<!-- hero section starts -->
-<section class="home" id="home">
-    <div id="particles-js"></div>
-
-    <div class="content">
-    <h2>Hi There,<br/> I'm Asif <span>Farhan</span></h2>
-    <p>i am into <span class="typing-text"></span></p>
-    <a href="#about" class="btn"><span>About Me</span>
-      <i class="fas fa-arrow-circle-down"></i>
-    </a>
-    <div class="socials">
-        <ul class="social-icons">
-          <li><a class="linkedin" aria-label="LinkedIn" href="https://www.facebook.com/asif.farhan.718" target="_blank"><i class="fab fa-facebook"></i></a></li>
-          <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/asif-farhan-42440533b" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
-          <li><a class="github" aria-label="GitHub" href="https://github.com/asiffarhan" target="_blank"><i class="fab fa-github"></i></a></li>
-          <li><a class="instagram" aria-label="Instagram" href="https://www.instagram.com/as__if_i__care/"><i class="fab fa-instagram" target="_blank"></i></a></li>
-          
-        </ul>
-      </div>
-    </div>
-<div class="image">
-    <img draggable="false" class="tilt" src="./assets/images/hero.png" alt="">
-</div>
-</section>
-<!-- hero section ends -->
-
-
-<!-- about section starts -->
-<section class="about" id="about">
-    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
-    
-    <div class="row">
-
-    <div class="image">
-        <img draggable="false" class="tilt" src="./assets/images/asif.png" alt="">
-    </div>
-    <div class="content">
-        <h3>I'm Asif Farhan</h3>
-        <span class="tag">CFD Enthusiast</span>
-        
-        <p>I am a Mechanical Engineer based in Dhaka, Bangladesh.
-          
-        </p>
-        <br>
-        
-        <div class="box-container">
-            <!-- <div class="box">
-              <p><span> age: </span> 20</p>
-              <p><span> phone : </span> +91 XXX-XXX-XXXX</p>
-            </div> -->
-            <div class="box">
-              <p><span> email : </span> asif.farhan2000@gmail.com</p>
-              <p><span> Phone : </span> +8801635090193</p>
-              <p><span> place : </span> Dhaka, Bangladesh - 1216</p>
-            </div>
-        </div>
-        
-        <div class="resumebtn">
-            <a href="https://drive.google.com/file/d/1mKs4ARWl6tQuOVRZxKC8Gf9qQi-L9Ios/view?usp=sharing" target="_blank" class="btn"><span>Resume</span>
-                <i class="fas fa-chevron-right"></i>
-            </a>
-        </div>
-
-    </div>
-    </div>
-</section>
-<!-- about section ends -->
-
-
-<!-- skills section starts -->
-<section class="skills" id="skills">
-    <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span></h2>
-
-    <div class="container">
-        <div class="skills-section">
-            <div class="tech-stack-wrapper">
-                <div class="tech-stack-box">
-                    <img alt="ansys" src="./assets/png/ansys.png" />
-                    <span>Ansys</span>
-                </div>
-                <div class="tech-stack-box">
-                    <img alt="matlab" src="./assets/png/matlab.png" />
-                    <span>Matlab</span>
-                </div>
-                <div class="tech-stack-box">
-                    <img alt="solidworks" src="./assets/png/solid.png" />
-                    <span>SolidWorks</span>
-                </div>
-                <div class="tech-stack-box">
-                    <img alt="microsoft excel" src="./assets/png/excel.png" />
-                    <span>Microsoft Excel</span>
-                </div>
-                <div class="tech-stack-box">
-                    <img alt="python" src="./assets/png/python.png" />
-                    <span>Python</span>
-                </div>
-                <div class="tech-stack-box">
-                    <img alt="jupyter notebook" src="./assets/png/jupyter.png" />
-                    <span>Jupyter Notebook</span>
-                </div>
-                <div class="tech-stack-box">
-                    <img alt="pandas" src="./assets/png/pandas.png" />
-                    <span>Pandas</span>
-                </div>
-                <div class="tech-stack-box">
-                    <img alt="matplotlib" src="./assets/png/matplotlib.png" />
-                    <span>Matplotlib</span>
-                </div>
-                <div class="tech-stack-box">
-                    <img alt="latex" src="./assets/png/latex.png" />
-                    <span>LaTeX</span>
-                </div>
-                <div class="tech-stack-box">
-                    <img alt="OpenFOAM" src="./assets/png/openfoam.png" />
-                    <span>OpenFOAM</span>
-                </div>
-                <div class="tech-stack-box">
-                    <img alt="Tecplot" src="./assets/png/tecplot.png" />
-                    <span>Tecplot</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- skills section ends -->
-
-
-<!-- education section starts -->
-<section class="education" id="education">
-
-  <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
-
-    <p class="qoute">Education is not the learning of facts, but the training of the mind to think.</p>
-
-    <div class="box-container">
-
-    <div class="box">
-        <div class="image">
-        <img draggable="false" src="./assets/images/educat/University.jpg" alt="">
-        </div>
-        <div class="content">
-        <h3>Bachelor of Science in Mechanical Engineering</h3>
-        <p>Ahsanullah University of Science & Technology</p>
-        <h4>2022-2026  | Pursuing</h4>
-        </div>
-    </div>
-
-    <div class="box">
-      <div class="image">
-      <img draggable="false" src="./assets/images/educat/college.jpg" alt="">
-      </div>
-      <div class="content">
-      <h3>HSC Science</h3>
-      <p>Mirpur Cantonment Public School & College</p>
-      <h4>2018-2020 | Completed</h4>
-      </div>
-    </div>
-
-</div>
-</section>
-<!-- education section ends -->
-
-
-<!-- projects section starts -->
-<section class="projects" id="work">
-    <h2 class="heading"><i class="fas fa-project-diagram"></i> My <span>Projects</span></h2>
-
-    <div class="projects-container">
-        <div class="project-card">
-            <div class="project-content">
-                <h3 class="project-title">Water Filling Container Multiphase Flow</h3>
-                <p class="project-description">
-                    This project simulates the multiphase flow of water filling a container using CFD. The study focuses on air–water interaction, free surface evolution, and transient flow behavior during filling. Key outcomes include velocity distribution, pressure changes, and surface dynamics, providing insights for improving container design and filling efficiency.
-                </p>
-                <a href="https://drive.google.com/file/d/1VDlLNVVC108qEsYhwPsJTjfYZq-sb0qN/view?usp=sharing" class="video-link" target="_blank">
-                    <i class="fas fa-play-circle"></i>
-                    Watch Video
-                </a>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="project-content">
-                <h3 class="project-title">Free falling droplet on a flat surface using OpenFoam</h3>
-                <p class="project-description">
-                    Simulates the impact of a free-falling liquid droplet on a flat surface using OpenFOAM to analyze droplet deformation, spreading, and rebound behavior.
-                </p>
-                <a href="https://drive.google.com/file/d/1OpkFulX4QWUnJF_hHnl2JL9EiB5O-n9j/view?usp=sharing" class="video-link">
-                    <i class="fas fa-play-circle"></i>
-                    Watch Video
-                </a>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="project-content">
-                <h3 class="project-title">Free falling droplet on a hemispherical surface using OpenFoam</h3>
-                <p class="project-description">
-                    Investigates the impact dynamics of a free-falling droplet on a hemispherical surface, examining spreading, deformation, and surface interaction using OpenFOAM.
-                </p>
-                <a href="https://drive.google.com/file/d/1FU_YY8TRvrJOo4oI_mxIWKf0K2osUEkX/view?usp=sharing" class="video-link">
-                    <i class="fas fa-play-circle"></i>
-                    Watch Video
-                </a>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="project-content">
-                <h3 class="project-title">Shaft of The
-Rear Wheels
-of Heavy Load Trucks</h3>
-                <p class="project-description">
-                    Fea analysis of the rear wheel shaft of heavy load trucks, focusing on stress distribution, deformation, and fatigue life under various loading conditions.
-                </p>
-                <a href="https://drive.google.com/file/d/1PNSITdBgy88iCVhkYWgqH-qm6YU2iHTz/view?usp=sharing" class="video-link" target="_blank">
-                    <i class="fas fa-file-pdf"></i>
-                    View PDF
-                </a>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="project-content">
-                <h3 class="project-title">Gear Train for Rotary Screw Compressor</h3>
-                <p class="project-description">
-                    Documenting the gear train design for a rotary screw compressor, including analysis, optimization, and performance evaluation.
-                </p>
-                <a href="https://drive.google.com/file/d/1EfJmSf7gk0c3cvvLZejreatjcxIMztQv/view?usp=sharing" class="video-link" target="_blank">
-                    <i class="fas fa-file-pdf"></i>
-                    View PDF
-                </a>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="project-content">
-                <h3 class="project-title">Design of a 50KW Grid-Connected Solar
-Photovoltaic Power Plant with Net
-Metering in Brahmanbaria.</h3>
-                <p class="project-description">
-                    A comprehensive report on the design and implementation of a 50KW grid-connected solar photovoltaic power plant with net metering in Brahmanbaria, covering system layout, component selection, and energy yield analysis.
-                </p>
-                <a href="https://drive.google.com/file/d/1L7zrbxYSeHS-9TJtAQVcyQSio2iYQdDv/view?usp=sharing" class="video-link" target="_blank">
-                    <i class="fas fa-file-pdf"></i>
-                    View PDF
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- projects section ends -->
-
-<!-- design section starts -->
-<section class="design" id="design">
-    <h2 class="heading"><i class="fas fa-pencil-ruler"></i> Design <span>(CAD)</span></h2>
-
-    <div class="design-container">
-        <div class="design-gallery">
-            <a href="https://drive.google.com/drive/u/0/folders/1gGTEAzHCoWmcOV4P_opaubaD2jhDwwFy" target="_blank" class="design-link">
-                View CAD Portfolio
-            </a>
-        </div>
-        <p class="design-note">Explore the CAD folder to view all design files and projects in one place.</p>
-    </div>
-</section>
-<!-- design section ends -->
-
-<!-- certifications section starts -->
-<section class="certifications" id="certifications">
-    <h2 class="heading"><i class="fas fa-certificate"></i> <span>Certifications</span></h2>
-
-    <div class="certifications-container">
-        <div class="cert-item">
-            <div class="cert-info">
-                <h3 class="cert-title">Certified SOLIDWORKS Associate (CSWA)</h3>
-                <span class="cert-issuer">Dassault Systèmes</span>
-                <p class="cert-description">Certified in SOLIDWORKS fundamentals through the CSWA exam, showcasing skills in parametric modeling, assemblies, and engineering drawings.</p>
-                <a href="https://drive.google.com/file/d/1PSP7mtMrlWv4-EFDs0KdPW12e4yJWAqv/view" class="btn" target="_blank">
-                    <i class="fas fa-file-pdf"></i> View Certificate
-                </a>
-            </div>
-        </div>
-
-        <div class="cert-item">
-            <div class="cert-info">
-                <h3 class="cert-title">Industrial Training Certificate</h3>
-                <span class="cert-issuer">Elite Hi-Tech Industries Ltd.</span>
-                <p class="cert-description">Completed a 14-day industrial training at Elite Hi-Tech Industries Ltd., gaining practical exposure to manufacturing processes, industrial machinery, and real-world engineering practices.</p>
-                <a href="https://drive.google.com/file/d/1bYOePTIB7qRMHyXKFubItQA7S5z5RTsL/view?usp=sharing" class="btn" target="_blank">
-                    <i class="fas fa-file-pdf"></i> View Certificate
-                </a>
-            </div>
-        </div>
-
-        <div class="cert-item">
-            <div class="cert-info">
-                <h3 class="cert-title">Basic Automobile Training</h3>
-                <span class="cert-issuer">Nitol Motors Limited</span>
-                <p class="cert-description">Completed a 5-day basic automobile training at Nitol Motors Limited, gaining foundational knowledge of vehicle systems, automotive maintenance, and workshop practices.</p>
-                <a href="https://drive.google.com/file/d/1St97SezBLwYqUNvFcy_g_TwEos6E3xqY/view?usp=sharing" class="btn" target="_blank">
-                    <i class="fas fa-file-pdf"></i> View Certificate
-                </a>
-            </div>
-        </div>
-
-        <div class="cert-item">
-            <div class="cert-info">
-                <h3 class="cert-title">Industrial Attachment Training Program</h3>
-                <span class="cert-issuer">Bangladesh Industrial Technical Assistance Center</span>
-                <p class="cert-description">Completed a 5-day Industrial Attachment Training Program at Bangladesh Industrial Technical Assistance Center (BITAC), gaining practical insight into industrial machining, manufacturing processes, and engineering workshop practices.</p>
-                <a href="https://drive.google.com/file/d/1XcItA4WUV_NjK56ibRk-R85eBl6Q1Btm/view?usp=sharing" class="btn" target="_blank">
-                    <i class="fas fa-file-pdf"></i> View Certificate
-                </a>
-            </div>
-        </div>
-
-        <div class="cert-item">
-            <div class="cert-info">
-                <h3 class="cert-title">Mechanical Project Showcasing</h3>
-                <span class="cert-issuer">AUST Mechanical Society</span>
-                <p class="cert-description">Participated in the annual mechanical project showcasing event, presenting a innovative design and demonstrating technical skills for a project named "Floating Waste Collecting Bot".</p>
-                <a href="https://drive.google.com/file/d/1p0qSVlPruoGibWmIgh8F3gaTmbKpHO67/view?usp=sharing" class="btn" target="_blank">
-                    <i class="fas fa-file-pdf"></i> View Certificate
-                </a>
-            </div>
-        </div>
-
-        <div class="cert-item">
-            <div class="cert-info">
-                <h3 class="cert-title">MATLAB Onramp</h3>
-                <span class="cert-issuer">MathWorks</span>
-                <p class="cert-description">Completed the MATLAB Onramp course by MathWorks, gaining foundational skills in MATLAB programming, data analysis, and basic computational problem-solving.</p>
-                <a href="https://drive.google.com/file/d/1ctb4-rmPMtn0VeK4hWx6gBGQoyyA7wl3/view?usp=sharing" class="btn" target="_blank">
-                    <i class="fas fa-file-pdf"></i> View Certificate
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- certifications section ends -->
-
-<!-- experience section starts -->
-<!-- <section class="experience" id="experience">
-
-  <h2 class="heading"><i class="fas fa-briefcase"></i> Experience </h2>
-
-  <div class="timeline">
-
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>Self Employed</h2>
-        </div>
-        <div class="desc">
-            <h3>Full Stack Developer</h3>
-            <p>Oct 2021 - present</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>Mapstreak Flyseas</h2>
-        </div>
-        <div class="desc">
-            <h3>Web Developer | Internship</h3>
-            <p>June 2021 - Dec 2021</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>The Spark Foundation</h2>
-        </div>
-        <div class="desc">
-            <h3>Website Developer | Internship</h3>
-            <p>May 2021 - June 2021</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>The Spark Foundation</h2>
-        </div>
-        <div class="desc">
-            <h3>Mobile Application Developer | Internship</h3>
-            <p>April 2021 - May 2021</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>Frshr Technologies</h2>
-        </div>
-        <div class="desc">
-            <h3>Wordpress Developer | Internship</h3>
-            <p>April 2021 - April 2021</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>WonderingBlog</h2>
-        </div>
-        <div class="desc">
-            <h3>Web Development & SEO | Internship</h3>
-            <p>March 2021 - April 2021</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="morebtn">
-    <a href="/experience" class="btn"><span>View All</span>
-      <i class="fas fa-arrow-right"></i>
-  </a>
-  </div>
-
-</div>
-
-</section> -->
-<!-- experience section ends -->
-
-<!-- contact section starts (DISABLED) -->
-<!-- <section class="contact" id="contact">
-  
-  <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
-
-  <div class="container">
-    <div class="content">
-      <div class="image-box">
-        <img draggable="false" src="./assets/images/contact1.png" alt="">
-      </div>
-    <form id="contact-form">
-      
-      <div class="form-group">
-        <div class="field">
-          <input type="text" name="name" placeholder="Name" required>
-          <i class='fas fa-user'></i>
-        </div>
-        <div class="field">
-          <input type="text" name="email" placeholder="Email" required>
-          <i class='fas fa-envelope'></i>
-        </div>
-        <div class="field">
-          <input type="text" name="phone" placeholder="Phone">
-          <i class='fas fa-phone-alt'></i>
-        </div>
-        <div class="message">
-        <textarea placeholder="Message" name="message" required></textarea>
-        <i class="fas fa-comment-dots"></i>
-        </div>
-        </div>
-      <div class="button-area">
-        <button type="submit">
-          Submit <i class="fa fa-paper-plane"></i></button>
-      </div>
-    </form>
-  </div>
-  </div>
-</section>
---> 
-<!-- contact section ends (DISABLED) -->
-
-
-<!-- footer section starts -->
-<section class="footer">
-
-  <div class="box-container">
-
-      <div class="box">
-          <h3>Asif's Portfolio</h3>
-          <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br/> <br/> </p>
-      </div>
-
-      <div class="box">
-          <h3>quick links</h3>
-          <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
-          <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
-          <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
-          <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
-          <!--<a href="#work"><i class="fas fa-chevron-circle-right"></i> work</a>
-          <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>-->
-      </div>
-
-      <div class="box">
-          <h3>contact info</h3>
-          <p> <i class="fas fa-phone"></i>+8801635090193</p>
-          <p> <i class="fas fa-envelope"></i>asif.farhan2000@gmail.com</p>
-          <p> <i class="fas fa-map-marked-alt"></i>Dhaka,Bangladesh-1216</p>
-          <div class="share">
-
-              
           </div>
+          <div class="submission-group">
+            <h4>Conference Papers</h4>
+            <p class="submission-venue conference-venue">10th BSME International Conference on Thermo-Fluid Engineering</p>
+            <ul class="submission-list">
+              <li>
+                <h5>Thermal Energy Storage Enhancement Using Alphabet-Inspired Fins in a Shell-and-Tube Heat Exchanger with Solid–Liquid PCM.</h5>
+                <p class="submission-status">Abstract accepted · full paper submitted</p>
+              </li>
+              <li>
+                <h5>Numerical Investigation of the Coupled Effect of Impact Angle and Ambient Rotor Downwash on Rain-Droplet Impact Regimes over UAV Surface</h5>
+                <p class="submission-status">Abstract accepted · full paper submitted</p>
+              </li>
+              <li>
+                <h5>Effect of Pre-Impact Thermal History on the Impact and Freezing of Free-Falling Supercooled Droplets on UAV-Relevant Surface.</h5>
+                <p class="submission-status">Abstract accepted · full paper submitted</p>
+              </li>
+            </ul>
+          </div>
+        </section>
       </div>
-  </div>
+    </section>
 
-  <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/asif-farhan-42440533b"> Asif Farhan</a></h1>
+    <section class="frame section-interior list-section" id="education" aria-labelledby="education-title">
+      <div class="section-heading"><h2 id="education-title">Education</h2></div>
+      <div class="affiliation-list">
+        <article class="affiliation-entry">
+          <img class="affiliation-logo" src="./assets/logos/aust.svg" alt="" loading="lazy">
+          <div>
+            <h3>B.Sc. in Mechanical Engineering</h3>
+            <p>Ahsanullah University of Science &amp; Technology</p>
+            <dl class="academic-results">
+              <div><dt>CGPA</dt><dd>3.874 / 4.000</dd></div>
+              <div><dt>Class rank</dt><dd>3rd of 78</dd></div>
+            </dl>
+          </div>
+          <p class="entry-meta">2022–2026</p>
+        </article>
+        <article class="affiliation-entry">
+          <img class="affiliation-logo" src="./assets/logos/mirpur-cantonment.png" alt="" loading="lazy">
+          <div>
+            <h3>Higher Secondary Certificate (HSC) in Science</h3>
+            <p>Mirpur Cantonment Public School &amp; College</p>
+            <dl class="academic-results"><div><dt>GPA</dt><dd>5.00 out of 5.00</dd></div></dl>
+          </div>
+          <p class="entry-meta">2018–2020</p>
+        </article>
+        <article class="affiliation-entry">
+          <img class="affiliation-logo" src="./assets/logos/monipur.webp" alt="" loading="lazy">
+          <div>
+            <h3>Secondary School Certificate (SSC)</h3>
+            <p>Monipur High School &amp; College</p>
+            <dl class="academic-results"><div><dt>GPA</dt><dd>5.00 out of 5.00</dd></div></dl>
+          </div>
+          <p class="entry-meta">2007–2017</p>
+        </article>
+      </div>
+    </section>
 
-</section>
-<!-- footer section ends -->
+    <section class="frame section-interior list-section" id="experience" aria-labelledby="experience-title">
+      <div class="section-heading"><h2 id="experience-title">Work Experience</h2></div>
+      <article class="role-card">
+        <div>
+          <p class="role-status"><span aria-hidden="true"></span> Current role</p>
+          <h3>CFD Simulation Engineer</h3>
+          <p><a href="https://macproteceng.com/">MACPROTEC Engineering</a></p>
+          <p class="role-description">Houston-based engineering and consulting for heavy process industries.</p>
+        </div>
+        <img class="company-logo" src="./assets/logos/macprotec.png" alt="" loading="lazy" decoding="async">
+        <details class="role-work">
+          <summary class="role-work-toggle">View CFD work <span class="expand" aria-hidden="true"></span></summary>
+          <div class="role-work-content">
+            <article class="cfd-case">
+              <h4>Baghouse coal transport</h4>
+              <p>Gas–solid particle transport through a baghouse, visualized with particle velocity tracks and a velocity-vector field.</p>
+              <details class="study cfd-gallery">
+                <summary><span><span class="study-meta">ANSYS Fluent</span><span class="study-reference">View contours and particle visualization</span></span><span class="expand" aria-hidden="true"></span></summary>
+                <div class="study-content">
+                  <div class="study-media validation-media">
+                    <figure>
+                      <a class="contour-link" href="./assets/cfd-work/baghouse/particle-velocity-tracks.png" target="_blank" rel="noopener" aria-label="Open particle velocity tracks at full size">
+                        <img src="./assets/cfd-work/baghouse/particle-velocity-tracks.png" alt="Coal particle tracks in the baghouse, colored by velocity magnitude in metres per second" loading="lazy" decoding="async">
+                      </a>
+                      <figcaption>Particle tracks colored by velocity magnitude (m/s).</figcaption>
+                    </figure>
+                    <figure>
+                      <a class="contour-link" href="./assets/cfd-work/baghouse/velocity-vectors.png" target="_blank" rel="noopener" aria-label="Open baghouse velocity-vector field at full size">
+                        <img src="./assets/cfd-work/baghouse/velocity-vectors.png" alt="Velocity vectors through the baghouse, colored by velocity magnitude in metres per second" loading="lazy" decoding="async">
+                      </a>
+                      <figcaption>Velocity-vector field colored by velocity magnitude (m/s).</figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </details>
+            </article>
+            <article class="cfd-case">
+              <h4>Calciner simulation</h4>
+              <p>ANSYS Fluent contours of particle motion and gas-species distributions through a precalciner.</p>
+              <details class="study cfd-gallery">
+                <summary><span><span class="study-meta">ANSYS Fluent</span><span class="study-reference">View contours and particle pathlines</span></span><span class="expand" aria-hidden="true"></span></summary>
+                <div class="study-content">
+                  <div class="study-media validation-media">
+                    <figure>
+                      <a class="contour-link" href="./assets/cfd-work/calciner/dpm-particle-concentration.png" target="_blank" rel="noopener" aria-label="Open DPM particle concentration contours at full size">
+                        <img src="./assets/cfd-work/calciner/dpm-particle-concentration.png" alt="Calciner particle pathlines colored by discrete phase model concentration" loading="lazy" decoding="async">
+                      </a>
+                      <figcaption>DPM particle concentration along particle pathlines.</figcaption>
+                    </figure>
+                    <figure>
+                      <a class="contour-link" href="./assets/cfd-work/calciner/oxygen-mole-fraction.png" target="_blank" rel="noopener" aria-label="Open oxygen mole-fraction contour at full size">
+                        <img src="./assets/cfd-work/calciner/oxygen-mole-fraction.png" alt="Oxygen mole-fraction contour through the calciner" loading="lazy" decoding="async">
+                      </a>
+                      <figcaption>O₂ mole fraction.</figcaption>
+                    </figure>
+                    <figure>
+                      <a class="contour-link" href="./assets/cfd-work/calciner/carbon-dioxide-mass-fraction.png" target="_blank" rel="noopener" aria-label="Open carbon dioxide mass-fraction contour at full size">
+                        <img src="./assets/cfd-work/calciner/carbon-dioxide-mass-fraction.png" alt="Carbon dioxide mass-fraction contour through the calciner" loading="lazy" decoding="async">
+                      </a>
+                      <figcaption>CO₂ mass fraction.</figcaption>
+                    </figure>
+                    <figure>
+                      <a class="contour-link" href="./assets/cfd-work/calciner/water-mass-fraction.png" target="_blank" rel="noopener" aria-label="Open water mass-fraction contour at full size">
+                        <img src="./assets/cfd-work/calciner/water-mass-fraction.png" alt="Water mass-fraction contour through the calciner" loading="lazy" decoding="async">
+                      </a>
+                      <figcaption>H₂O mass fraction.</figcaption>
+                    </figure>
+                    <figure>
+                      <a class="contour-link" href="./assets/cfd-work/calciner/nitrogen-mole-fraction.png" target="_blank" rel="noopener" aria-label="Open nitrogen mole-fraction contour at full size">
+                        <img src="./assets/cfd-work/calciner/nitrogen-mole-fraction.png" alt="Nitrogen mole-fraction contour through the calciner" loading="lazy" decoding="async">
+                      </a>
+                      <figcaption>N₂ mole fraction.</figcaption>
+                    </figure>
+                    <figure>
+                      <a class="contour-link" href="./assets/cfd-work/calciner/carbon-dioxide-mole-fraction.png" target="_blank" rel="noopener" aria-label="Open carbon dioxide mole-fraction contour at full size">
+                        <img src="./assets/cfd-work/calciner/carbon-dioxide-mole-fraction.png" alt="Carbon dioxide mole-fraction contour through the calciner" loading="lazy" decoding="async">
+                      </a>
+                      <figcaption>CO₂ mole fraction.</figcaption>
+                    </figure>
+                    <figure>
+                      <a class="contour-link" href="./assets/cfd-work/calciner/particle-id-pathlines.png" target="_blank" rel="noopener" aria-label="Open calciner particle pathlines colored by particle ID at full size">
+                        <img src="./assets/cfd-work/calciner/particle-id-pathlines.png" alt="Calciner particle pathlines colored by particle ID" loading="lazy" decoding="async">
+                      </a>
+                      <figcaption>Particle pathlines colored by particle ID.</figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </details>
+            </article>
+          </div>
+        </details>
+      </article>
+    </section>
 
+    <section class="band" id="work" aria-labelledby="work-title">
+      <div class="frame section-interior">
+        <div class="section-heading"><h2 id="work-title">Training &amp; Projects</h2></div>
+        <h3 class="subsection-title" id="training">Industrial &amp; Workshop Training</h3>
+        <div class="affiliation-list training-list">
+          <article class="affiliation-entry">
+            <img class="affiliation-logo" src="./assets/logos/elite.png" alt="" loading="lazy">
+            <div>
+              <h4>Industrial training</h4>
+              <p>Elite Hi-Tech Industries Ltd.</p>
+              <p>Manufacturing processes and industrial machinery.</p>
+              <div class="training-certificate"><a class="button-link" href="./assets/certificates/elite-hi-tech-training.pdf" target="_blank" rel="noopener">View certificate <span aria-hidden="true">↗</span></a></div>
+            </div>
+            <p class="entry-meta">14 days</p>
+          </article>
+          <article class="affiliation-entry">
+            <img class="affiliation-logo" src="./assets/logos/nitol.png" alt="" loading="lazy">
+            <div>
+              <h4>Basic automobile training</h4>
+              <p>Nitol Motors Limited</p>
+              <p>Vehicle systems, maintenance, and workshop practices.</p>
+              <div class="training-certificate"><a class="button-link" href="./assets/certificates/nitol-motors-training.jpeg" target="_blank" rel="noopener">View certificate <span aria-hidden="true">↗</span></a></div>
+            </div>
+            <p class="entry-meta">5 days</p>
+          </article>
+          <article class="affiliation-entry">
+            <img class="affiliation-logo" src="./assets/logos/bitac.png" alt="" loading="lazy">
+            <div>
+              <h4>Industrial attachment training</h4>
+              <p>Bangladesh Industrial Technical Assistance Center</p>
+              <p>Industrial machining and manufacturing processes.</p>
+              <div class="training-certificate"><a class="button-link" href="./assets/certificates/bitac-industrial-attachment.jpeg" target="_blank" rel="noopener">View certificate <span aria-hidden="true">↗</span></a></div>
+            </div>
+            <p class="entry-meta">5 days</p>
+          </article>
+        </div>
+        <h3 class="subsection-title" id="projects">Engineering Projects</h3>
+        <div class="project-grid">
+          <article><h4>Rear-wheel shaft for heavy-load trucks</h4><p>Finite element analysis of stress, deformation, and fatigue under different loading conditions.</p><a href="./assets/project-reports/rear-wheel-shaft-heavy-load-truck.pdf" target="_blank" rel="noopener">Project report <span aria-hidden="true">↗</span></a></article>
+          <article><h4>Gear train for a rotary screw compressor</h4><p>Gear train design, analysis, and performance evaluation.</p><a href="./assets/project-reports/rotary-screw-compressor-gear-train.pdf" target="_blank" rel="noopener">Project report <span aria-hidden="true">↗</span></a></article>
+          <article><h4>50 kW grid-connected solar PV design</h4><p>System layout, component selection, and energy yield for a net-metered plant in Brahmanbaria.</p><a href="./assets/project-reports/50kw-grid-connected-solar-brahmanbaria.pdf" target="_blank" rel="noopener">Project report <span aria-hidden="true">↗</span></a></article>
+          <article id="design"><h4>CAD portfolio</h4><p>CSWA practice parts and selected project models.</p><a href="#cad-gallery">View CAD portfolio <span aria-hidden="true">↓</span></a></article>
+        </div>
+        <details class="cad-gallery" id="cad-gallery">
+          <summary class="cad-gallery-toggle"><span>View CAD portfolio</span><span class="cad-gallery-count">16 renders</span></summary>
+          <div class="cad-gallery-content">
+          <p class="cad-gallery-intro">Selected CAD models and renders. Open any image for a larger view.</p>
+          <h4>Practice models</h4>
+          <div class="cad-gallery-grid">
+            <figure><a href="./assets/cad-portfolio/1.png" target="_blank" rel="noopener"><img src="./assets/cad-portfolio/1.png" alt="Practice part 01" loading="lazy" decoding="async"></a><figcaption>Practice part 01</figcaption></figure>
+            <figure><a href="./assets/cad-portfolio/2.png" target="_blank" rel="noopener"><img src="./assets/cad-portfolio/2.png" alt="Practice part 02" loading="lazy" decoding="async"></a><figcaption>Practice part 02</figcaption></figure>
+            <figure><a href="./assets/cad-portfolio/3.png" target="_blank" rel="noopener"><img src="./assets/cad-portfolio/3.png" alt="Practice part 03" loading="lazy" decoding="async"></a><figcaption>Practice part 03</figcaption></figure>
+            <figure><a href="./assets/cad-portfolio/4.png" target="_blank" rel="noopener"><img src="./assets/cad-portfolio/4.png" alt="Practice part 04" loading="lazy" decoding="async"></a><figcaption>Practice part 04</figcaption></figure>
+            <figure><a href="./assets/cad-portfolio/5.png" target="_blank" rel="noopener"><img src="./assets/cad-portfolio/5.png" alt="Practice part 05" loading="lazy" decoding="async"></a><figcaption>Practice part 05</figcaption></figure>
+            <figure><a href="./assets/cad-portfolio/6.png" target="_blank" rel="noopener"><img src="./assets/cad-portfolio/6.png" alt="Practice part 06" loading="lazy" decoding="async"></a><figcaption>Practice part 06</figcaption></figure>
+            <figure><a href="./assets/cad-portfolio/7.png" target="_blank" rel="noopener"><img src="./assets/cad-portfolio/7.png" alt="Practice part 07" loading="lazy" decoding="async"></a><figcaption>Practice part 07</figcaption></figure>
+            <figure><a href="./assets/cad-portfolio/8.png" target="_blank" rel="noopener"><img src="./assets/cad-portfolio/8.png" alt="Practice part 08" loading="lazy" decoding="async"></a><figcaption>Practice part 08</figcaption></figure>
+            <figure><a href="./assets/cad-portfolio/9.png" target="_blank" rel="noopener"><img src="./assets/cad-portfolio/9.png" alt="Practice part 09" loading="lazy" decoding="async"></a><figcaption>Practice part 09</figcaption></figure>
+            <figure><a href="./assets/cad-portfolio/10.png" target="_blank" rel="noopener"><img src="./assets/cad-portfolio/10.png" alt="Practice part 10" loading="lazy" decoding="async"></a><figcaption>Practice part 10</figcaption></figure>
+            <figure><a href="./assets/cad-portfolio/11.png" target="_blank" rel="noopener"><img src="./assets/cad-portfolio/11.png" alt="Practice part 11" loading="lazy" decoding="async"></a><figcaption>Practice part 11</figcaption></figure>
+            <figure><a href="./assets/cad-portfolio/12.png" target="_blank" rel="noopener"><img src="./assets/cad-portfolio/12.png" alt="Practice part 12" loading="lazy" decoding="async"></a><figcaption>Practice part 12</figcaption></figure>
+            <figure><a href="./assets/cad-portfolio/13.png" target="_blank" rel="noopener"><img src="./assets/cad-portfolio/13.png" alt="Practice part 13" loading="lazy" decoding="async"></a><figcaption>Practice part 13</figcaption></figure>
+            <figure><a href="./assets/cad-portfolio/14.png" target="_blank" rel="noopener"><img src="./assets/cad-portfolio/14.png" alt="Practice part 14" loading="lazy" decoding="async"></a><figcaption>Practice part 14</figcaption></figure>
+          </div>
+          <h4>Assembly renders</h4>
+          <div class="cad-gallery-grid">
+            <figure><a href="./assets/cad-portfolio/16.png" target="_blank" rel="noopener"><img src="./assets/cad-portfolio/16.png" alt="CAD assembly render 01" loading="lazy" decoding="async"></a><figcaption>Assembly render 01</figcaption></figure>
+            <figure><a href="./assets/cad-portfolio/17.png" target="_blank" rel="noopener"><img src="./assets/cad-portfolio/17.png" alt="CAD assembly render 02" loading="lazy" decoding="async"></a><figcaption>Assembly render 02</figcaption></figure>
+          </div>
+          </div>
+        </details>
+      </div>
+    </section>
 
-<!-- scroll top btn -->
-<a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
-<!-- scroll back to top -->
+    <section class="frame section-interior list-section" id="skills" aria-labelledby="skills-title">
+      <div class="section-heading"><h2 id="skills-title">Skills &amp; Certifications</h2></div>
+      <div class="credentials">
+        <div>
+          <h3>Tools</h3>
+          <ul class="skill-list">
+            <li><img src="./assets/logos/openfoam.png" alt="" loading="lazy">OpenFOAM</li>
+            <li><img src="./assets/logos/ansys.png" alt="" loading="lazy">Ansys</li>
+            <li><img src="./assets/logos/tecplot.png" alt="" loading="lazy">Tecplot</li>
+            <li><img src="./assets/logos/solid.png" alt="" loading="lazy">SOLIDWORKS</li>
+            <li><img src="./assets/logos/matlab.png" alt="" loading="lazy">MATLAB</li>
+            <li><img src="./assets/logos/python.png" alt="" loading="lazy">Python</li>
+            <li><img src="./assets/logos/jupyter.png" alt="" loading="lazy">Jupyter Notebook</li>
+            <li><img src="./assets/logos/pandas.png" alt="" loading="lazy">pandas</li>
+            <li><img src="./assets/logos/matplotlib.png" alt="" loading="lazy">Matplotlib</li>
+            <li><img src="./assets/logos/excel.png" alt="" loading="lazy">Microsoft Excel</li>
+            <li><img src="./assets/logos/latex.png" alt="" loading="lazy">LaTeX</li>
+            <li><img class="tool-autodesk-logo" src="./assets/logos/autodesk-inventor.svg" alt="" loading="lazy">Autodesk Inventor</li>
+          </ul>
+        </div>
+        <div id="certifications">
+          <h3>Certifications &amp; Recognition</h3>
+          <ul class="cert-list">
+            <li><img src="./assets/logos/solid.png" alt="" loading="lazy"><div><a href="./assets/certificates/cswa.pdf" target="_blank" rel="noopener">Certified SOLIDWORKS Associate (CSWA) <span aria-hidden="true">↗</span></a><p>Dassault Systèmes</p></div></li>
+            <li><img src="./assets/logos/matlab.png" alt="" loading="lazy"><div><a href="./assets/certificates/matlab-onramp.pdf" target="_blank" rel="noopener">MATLAB Onramp <span aria-hidden="true">↗</span></a><p>MathWorks</p></div></li>
+            <li><img src="./assets/logos/aust.svg" alt="" loading="lazy"><div><a href="./assets/certificates/project-showcasing.jpeg" target="_blank" rel="noopener">Mechanical Project Showcasing <span aria-hidden="true">↗</span></a><p>AUST Mechanical Society · Floating Waste Collecting Bot</p></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
 
-
-<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
-<!-- jquery cdn -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- typed.js cdn -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- particle.js links -->
-<script src="./assets/js/particles.min.js"></script>
-<script src="./assets/js/app.js"></script>
-
-<!-- vanilla tilt.js links -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- scroll reveal anim -->
-<script src="https://unpkg.com/scrollreveal"></script>
-
-<script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
-    ></script>
-
-<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
-
-<script src="./assets/js/script.js"></script>
-
+  <footer id="contact">
+    <div class="frame section-interior footer-inner">
+      <div id="cv"><h2>CV &amp; Contact</h2><p>Dhaka, Bangladesh</p></div>
+      <div class="contact-links">
+        <a href="mailto:asif.farhan2000@gmail.com">Email <span aria-hidden="true">↗</span></a>
+        <a href="https://www.linkedin.com/in/asif-farhan-42440533b">LinkedIn <span aria-hidden="true">↗</span></a>
+        <a href="https://github.com/asiffarhan">GitHub <span aria-hidden="true">↗</span></a>
+        <a href="./assets/asif-farhan-cv.pdf" target="_blank" rel="noopener" aria-label="CV (PDF, opens in a new tab)">CV <span aria-hidden="true">↗</span></a>
+      </div>
+      <nav id="page-links" aria-label="Page links"><a href="#home">Back to top ↑</a><a href="#research">Research</a><a href="#education">Education</a><a href="#experience">Work Experience</a><a href="#work">Training &amp; Projects</a><a href="#skills">Skills &amp; Certifications</a></nav>
+    </div>
+  </footer>
 </body>
 </html>
